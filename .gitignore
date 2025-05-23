@@ -17,3 +17,5 @@ node_modules/
 .env.production.local
 .env.local
 
+# docker data
+data/
