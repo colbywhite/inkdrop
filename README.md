@@ -13,9 +13,10 @@ You just need to deploy an instance of CouchDB.
 
 1. Set env variables in Railway UI; see `.env.example`.
 2. Configure Railway to deploy your repo. `railway.toml` will build and deploy the `Dockerfile`.
-3. Run build.
-4. Add TCP proxy in Railway UI (Settings -> Networking) to get public URL. (Referred to as `RAILWAY_URL` in next step.)
-5. Your sync URL for Inkdrop will be `http://${COUCHDB_USER}:${COUCHDB_PASSWORD}@${RAILWAY_URL}/inkdrop-db`
+3. Add a volume in Railway UI (CMD + K -> Volume); mount on `/opt/couchdb/data`.
+4. Run build.
+5. Add TCP proxy in Railway UI (Settings -> Networking) to get public URL. (Referred to as `RAILWAY_URL` in next step.)
+6. Your sync URL for Inkdrop will be `http://${COUCHDB_USER}:${COUCHDB_PASSWORD}@${RAILWAY_URL}/inkdrop-db`
 
 # Run DB locally
 
